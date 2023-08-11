@@ -13,8 +13,8 @@ To start your Phoenix server:
 Endpoints: 
 
   * Get List of Cars:
-  [`localhost:4000/api/cars`](http://localhost:4000/cars)
+  [`localhost:4000/api/cars`](http://localhost:4000/api/cars)
 
   * Get Car by Id
-  [`localhost:4000/api/cars/:id`](http://localhost:4000/cars/#{carId})
+  [`localhost:4000/api/cars/:id`](http://localhost:4000/api/cars/#{carId})
 
