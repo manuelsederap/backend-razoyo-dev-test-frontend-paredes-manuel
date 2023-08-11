@@ -11,7 +11,7 @@ defmodule RazoyoElixirWeb.CarController do
   def car(conn, params) do
     case params["id"] do
       nil ->
-        render_result(conn, "cars.json", ApiEndpointsCars.get_cars(params["filter"]))
+        render_result(conn, "cars.json", ApiEndpointsCars.get_cars(nil))
       _ ->
         render_result(conn, "car.json", ApiEndpointsCars.get_car(params["id"]))
     end
