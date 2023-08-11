@@ -22,12 +22,14 @@ defmodule RazoyoElixir.ApiEndpointsCars do
       HTTPoison.get(
         "#{@url}/#{id}",
         [Authorization: "#{token}", "Content-Type": "application/json"],
+        [])
+
+    case decode_response(response) do
+      {:ok, body} ->
+        body
+      {:error, _} ->
         []
-      )
-
-    {:ok, body} = decode_response(response)
-
-    body
+    end
   end
 
   defp update_url(url, ""), do: url
